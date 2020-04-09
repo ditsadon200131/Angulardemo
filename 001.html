@@ -1,0 +1,15 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+<script>
+    var myModule =angular.module('myModule',[]);
+
+    myModule.controller('MyController',function ($scope)     {
+        $scope.varName = " 44444 ";
+    });
+</script>
+
+<div ng-app="myModule">
+    <div ng-controller="MyController">
+        <div>{{varName}}</div>
+   </div>
+
+</div>   
