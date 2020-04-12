@@ -1,16 +1,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
 <script>
-    var myModule = angular.module('myModule',function($scope){
+    var myModule = angular.module('myModule',[]);
+
+        myModule.controller('MyController', function ($scope){
         $scope.x = 10;
         $scope.y = 20;
-        $scope.z =30;
+        $scope.z = 30;
     });
 </script>
 
-<div ng-app-"myModule">
-    <div ng-controller="mycontroller">
-        <Div>x={{X}}</Div>
-        <div>y={{y}}</div>
-        <div>z={{z}}</div>
+<div ng-app="myModule">
+    <div ng-controller="MyController">
+        <Div>x = {{ x }}</Div>
+        <div>y = {{ y }}</div>
+        <div>z = {{ z }}</div>
     </div>
 </div>
