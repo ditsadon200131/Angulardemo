@@ -1,21 +1,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
 <script>
-    var myModule = angular.module('myModule',[]);
+    var myModule = angular.module('myModule', []);
 
-        myModule.controller('MyController', function ($scope){
+        myModule.controller('MyController', function ($scope) {
             $scope.customer = [
-            { code: 1001,name:'Hamm'},
-            { code: 1002,name:'222'},
-            { code: 1003,name:'3333'},
-            { code: 1004,name:'4444'}
+            { code: 1001, name:'Hamm' },
+            { code: 1002, name:'222' },
+            { code: 1003, name:'3333' },
+            { code: 1004, name:'4444' }
         ];
     });
 </script>
 
 <div ng-app="myModule">
     <div ng-controller="MyController">
-        <div ng-repea="item in custumer">
-        {{item.code}} = {{item.name}}
-    </div>
+        <div ng-repeat="item in customer">
+                {{ item.code }} = {{ item.name }} 
+
+      </div>
     </div>
 </div>
