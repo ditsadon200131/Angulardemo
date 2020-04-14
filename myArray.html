@@ -3,16 +3,19 @@
     var myModule = angular.module('myModule',[]);
 
         myModule.controller('MyController', function ($scope){
-        $scope.x = 1000;
-        $scope.y = 2000;
-        $scope.z = 3000;
+            $scope.customer = [
+            { code: 1001,name:'Hamm'},
+            { code: 1002,name:'222'},
+            { code: 1003,name:'3333'},
+            { code: 1004,name:'4444'}
+        ];
     });
 </script>
 
 <div ng-app="myModule">
     <div ng-controller="MyController">
-        <Div>x = {{ x }}</Div>
-        <div>y = {{ y }}</div>
-        <div>z = {{ z }}</div>
+        <div ng-repea="item in custumer">
+        {{item.code}} = {{item.name}}
+    </div>
     </div>
 </div>
