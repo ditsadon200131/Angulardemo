@@ -1,0 +1,26 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+<script>
+    var myModule = angular.module('myModule', []);
+
+        myModule.controller('MyController', function ($scope) {
+            $scope.customer = [
+            { code: 1001, name:'Hamm' },
+            { code: 1002, name:'222' },
+            { code: 1003, name:'3333' },
+            { code: 1004, name:'4444' }
+        ];
+        $scope.x = 10
+    });
+</script>
+
+<div ng-app="myModule">
+    <div ng-controller="MyController">
+        <div np-if="x == 10"> x is 10</div>
+        <div np-if="x != 10 && x > 0"> x < 10</div>
+         <div ng-repeat="item in customer">
+            <div ng-if="item.code != 1002">
+                {{item.code}} = {{ item.name }}
+            </div>
+      </div>
+    </div>
+</div>
