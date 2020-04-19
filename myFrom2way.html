@@ -1,0 +1,22 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+<script>
+    var myModule = angular.module('myModule', []);
+/* two way binding เปลี่ยข้อมูล Auto */
+        myModule.controller('MyController', function ($scope) {
+
+    });
+</script>
+
+<div ng-app="myModule">
+    <div ng-controller="MyController">
+
+
+        <from>
+            <div>Name = <input ng-model = "customer.name" /></div>
+            <div>tel = <input ng-model = "customer.tel" /></div>
+        </from>
+        <div>Name = {{ customer.name }}</div>
+        <div>Tell = {{ customer.tel }}</div>
+
+    </div>
+</div>
