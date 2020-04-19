@@ -1,0 +1,26 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+<script>
+    var myModule = angular.module('myModule', []);
+
+        myModule.controller('MyController', function ($scope) {
+            $scope.showData = function() {
+                $scope.nameValue = $scope.name;
+                $scope.telValue = $scope.tel;
+            }
+    });
+</script>
+
+<div ng-app="myModule">
+    <div ng-controller="MyController">
+        <from>
+            <div>Name = <input ng-model = "name" /></div>
+            <div>tel = <input ng-model = "tel" /></div>
+            <button ng-click="showData()">
+                คลิก เพื่อทดสอบ
+            </button>
+        </from>
+        <div>Name = {{ nameValue }}</div>
+        <div>Tell = {{ telValue }}</div>
+
+    </div>
+</div>
