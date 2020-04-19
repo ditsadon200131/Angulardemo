@@ -1,0 +1,35 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+<script>
+    var myModule = angular.module('myModule', []);
+/*  */
+        myModule.controller('MyController', function ($scope) {
+            $scope.product = [
+                {name: 'jpos', price: 3000},
+                {name: 'jService' , price: 2500},
+                {name: 'jRoom', price: 700},
+                {name: 'jCommerce', price: 900}
+            ]
+            $scope.productBonus =[];
+           $scope.showData = function() {
+            angular.forEach($scope.product, item  => {
+                if(item.price > 1000){
+                
+                $scope.productBonus.push(item) ;                 
+                }  
+            })
+            
+            console.log($scope.productBonus);
+
+           }
+    })
+    
+    
+    ;
+</script> 
+<div ng-app="myModule">
+    <div ng-controller="MyController">
+        <button ng-click="showData()">
+            เก็บค่า
+        </button>
+    </div>
+</div>
