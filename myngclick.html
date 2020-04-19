@@ -3,19 +3,18 @@
     var myModule = angular.module('myModule', []);
 
         myModule.controller('MyController', function ($scope) {
-            $scope.showMessge = function() {
-                $scope.messge = "HAMM LOVE PRAEW";
+            $scope.showMessage = function() {
+                $scope.message = "HAMM LOVE PRAEW";
             }
-        
     });
 </script>
 
 <div ng-app="myModule">
     <div ng-controller="MyController">
-      <button ng-click="showMessge">
+      <button ng-click="showMessage()">
           Click Messge
       </button>
-    <div>{{ messge }}</div>      
+    <div>{{ message }}</div>      
     
     </div>
 </div>
