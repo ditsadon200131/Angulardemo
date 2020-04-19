@@ -1,0 +1,21 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+<script>
+    var myModule = angular.module('myModule', []);
+
+        myModule.controller('MyController', function ($scope) {
+            $scope.showMessge = function() {
+                $scope.messge = "HAMM LOVE PRAEW";
+            }
+        
+    });
+</script>
+
+<div ng-app="myModule">
+    <div ng-controller="MyController">
+      <button ng-click="showMessge">
+          Click Messge
+      </button>
+    <div>{{ messge }}</div>      
+    
+    </div>
+</div>
