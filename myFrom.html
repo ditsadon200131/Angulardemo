@@ -3,9 +3,12 @@
     var myModule = angular.module('myModule', []);
 
         myModule.controller('MyController', function ($scope) {
+            $scope.customer = {}
             $scope.showData = function() {
-                $scope.nameValue = $scope.name;
-                $scope.telValue = $scope.tel;
+                $scope.nameValue = $scope.customer.name;
+                $scope.telValue = $scope.customer.tel;
+
+                console.log($scope.customer);
             }
     });
 </script>
@@ -13,8 +16,8 @@
 <div ng-app="myModule">
     <div ng-controller="MyController">
         <from>
-            <div>Name = <input ng-model = "name" /></div>
-            <div>tel = <input ng-model = "tel" /></div>
+            <div>Name = <input ng-model = "customer.name" /></div>
+            <div>tel = <input ng-model = "customer.tel" /></div>
             <button ng-click="showData()">
                 คลิก เพื่อทดสอบ
             </button>
