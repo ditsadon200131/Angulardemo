@@ -1,22 +1,27 @@
-<script src="angular-1.7.9/angular.js"></script>
-<script src="angular-1.7.9/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
 <script>
     var app = angular.module('app',['ngRoute']);
    
     app.config(function($routeProvider){
         $routeProvider
-        .when('/',{temlateUrl:'main.html'})
-        .when('/red',{temlateUrl:'red.html'})
-        .when('/green',{temlateUrl:'green.html'})
-        .when('/blue',{temlateUrl:'blue.html'})
+        .when('/',{
+            templateUrl:'main.html'})
+        .when('/red',{
+            templateUrl:'red.html'})
+        .when('/green',{
+            templateUrl:'green.html'})
+        .when('/blue',{
+            templateUrl:'blue.html'})
         
     })
     </script>
 <div ng-app="app">
-    <a href="#/!">Main</a>
+    <a href="#!/">Main</a>
     <a href="#!red">red</a>
     <a href="#!green">Green</a>
     <a href="#!blue">Blue</a>
+ 
     <div ng-view></div>
 </div>
    
